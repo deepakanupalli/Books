@@ -1,0 +1,600 @@
+<style id="Details.css">
+
+</style>
+<script id="Details.js">
+Application.$controller("DetailsPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+
+    $scope.deleteBookonCanUpdate = function(variable, data) {
+        /*if (confirm('Would you like to delete the book!')) {
+            return true;
+        } else {
+            return false;
+        }*/
+    };
+
+}]);
+</script>
+<script id="Details.variables.json">
+var _DetailsPage_Variables_ ={
+	"book": {
+		"name": "book",
+		"type": "Book",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "BOOK",
+				"fields": [
+					{
+						"name": "id",
+						"type": "number",
+						"value": "bind:Variables.SELECTED_BOOK_ID.dataSet.dataValue"
+					},
+					{
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"name": "author",
+						"type": "string"
+					},
+					{
+						"name": "publisher",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "isbn",
+						"type": "string"
+					},
+					{
+						"name": "imageUrl",
+						"type": "string"
+					},
+					{
+						"name": "readStatus",
+						"type": "number"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "LIBRARY",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-book-wm.LiveVariable-1440597888064",
+		"package": "com.books.library.Book",
+		"tableName": "BOOK",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "author",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "AUTHOR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "imageUrl",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "IMAGE_URL",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "isbn",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "ISBN",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "publisher",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "PUBLISHER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "readStatus",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "READ_STATUS",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": "-1"
+				},
+				{
+					"fieldName": "title",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "TITLE",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "description",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "DESCRIPTION",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 2000,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "rating",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "RATING",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": "3"
+				},
+				{
+					"fieldName": "tenantid",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "TENANTID",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Book",
+			"fullyQualifiedName": "com.books.library.Book",
+			"tableType": "TABLE"
+		},
+		"bindCount": 0
+	},
+	"deleteBook": {
+		"name": "deleteBook",
+		"type": "Book",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "BOOK",
+				"fields": [
+					{
+						"name": "id",
+						"type": "number",
+						"value": "bind:Variables.SELECTED_BOOK_ID.dataSet.dataValue"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "delete",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onCanUpdate": "Javascript",
+		"onSuccess": "goToPage-Main",
+		"liveSource": "LIBRARY",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"inputFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-deleteBook-wm.LiveVariable-1440605325428",
+		"package": "com.books.library.Book",
+		"tableName": "BOOK",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "author",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "AUTHOR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "imageUrl",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "IMAGE_URL",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "isbn",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "ISBN",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "publisher",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "PUBLISHER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "readStatus",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "READ_STATUS",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": "-1"
+				},
+				{
+					"fieldName": "title",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "TITLE",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "description",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "DESCRIPTION",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 2000,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "rating",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "RATING",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": "3"
+				},
+				{
+					"fieldName": "tenantid",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "TENANTID",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Book",
+			"fullyQualifiedName": "com.books.library.Book",
+			"tableType": "TABLE"
+		}
+	},
+	"vibrate": {
+		"name": "vibrate",
+		"owner": "Page",
+		"dataSet": {
+			"data": {}
+		},
+		"dataBinding": {},
+		"service": "device",
+		"operation": "vibrate",
+		"startUpdate": false,
+		"imageQuality": 80,
+		"imageEncodingType": "0",
+		"allowImageEdit": false,
+		"correctOrientation": true,
+		"saveToPhotoAlbum": false,
+		"geolocationHighAccuracy": true,
+		"geolocationMaximumAge": 3,
+		"geolocationTimeout": 5,
+		"vibrationtime": 0.2,
+		"category": "wm.MobileVariable",
+		"_id": "wm-vibrate-wm.MobileVariable-1440643543606"
+	},
+	"updateBookStatus": {
+		"name": "updateBookStatus",
+		"type": "LIBRARYupdateBookStatusrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "readStatus",
+						"isList": false,
+						"value": "bind:Widgets.readStatus.datavalue"
+					},
+					{
+						"name": "id",
+						"isList": false,
+						"value": "bind:Variables.SELECTED_BOOK_ID.dataSet.dataValue"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "LIBRARY",
+		"operation": "updateBookStatus",
+		"operationType": "nativequery",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"_id": "wm-updateBookStatus-LIBRARYUpdateBookStatus-wm.ServiceVariable-1440656063785"
+	},
+	"updateBookRating": {
+		"name": "updateBookRating",
+		"type": "LIBRARYupdateBookRatingrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "rating",
+						"isList": false,
+						"value": "bind:Widgets.rating1.datavalue"
+					},
+					{
+						"name": "id",
+						"isList": false,
+						"value": "bind:Variables.SELECTED_BOOK_ID.dataSet.dataValue"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "LIBRARY",
+		"operation": "updateBookRating",
+		"operationType": "nativequery",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"_id": "wm-updateBookRating-LIBRARYUpdateBookRating-wm.ServiceVariable-1441880458480"
+	}
+}
+</script>
+<script id="Details.html" type="text/ng-template">
+<wm-page data-ng-controller="DetailsPageController" name="page1">
+    <wm-mobile-navbar name="mobile_navbar1" title="Details" backbuttoniconclass="glyphicon glyphicon-menu-left">
+        <wm-button class="btn-transparent" caption="" type="button" name="deleteBtn" fontweight="bold" on-click="vibrate;deleteBook" show="true" iconurl="resources/images/imagelists/icon_delete.png"></wm-button>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="BookHeader" paddingleft="10" paddingright="10">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn1_1">
+                        <wm-container name="container1">
+                            <wm-container name="bgContainer" backgroundrepeat="no-repeat" horizontalalign="center" paddingtop="5" paddingright="5" paddingbottom="5" paddingleft="5" backgroundcolor="rgba(0,0,0,0.3);" display="inline-block" margintop="40" marginbottom="25"
+                            class="bg-image-container" backgroundimage="resources/images/imagelists/spinner-small.gif" backgroundposition="center,center">
+                                <wm-picture name="picture1" height="150px" picturesource="bind:Variables.book.dataSet.data[$i].imageUrl"></wm-picture>
+                            </wm-container>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1" horizontalalign="center">
+                        <wm-label name="label1" caption="bind:Variables.book.dataSet.data[$i].title" fontunit="em" class="h3" width="250" fontsize="1" margintop="5" marginbottom="5"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn4" horizontalalign="center">
+                        <wm-label name="label2" caption="bind:'by '+ Variables.book.dataSet.data[$i].author" fontsize="0.87" fontunit="em" marginbottom="10"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn7" horizontalalign="center">
+                        <wm-rating name="rating1" datavalue="bind:Variables.book.dataSet.data[$i].rating" iconsize="1.2em" on-change="updateBookRating"></wm-rating>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-container name="container3" paddingleft="10" paddingright="10">
+                <wm-select name="readStatus" dataset="bind:Variables.READ_STATUS_ENUM.dataSet" datafield="value" displayfield="label" datavalue="bind:Variables.book.dataSet.data[$i].readStatus" on-change="updateBookStatus" margintop="20" marginbottom="10"
+                color="#BCBDBB" backgroundcolor="#273647" paddingtop=".5" paddingbottom=".5" paddingunit="em"></wm-select>
+                <wm-label name="label3" caption="Description" class="h3" color="#BCBDBB" fontsize="0.92" fontunit="em" paddingtop="0" paddingbottom="0" paddingleft="1.2" paddingright="1.2" paddingunit="em"></wm-label>
+                <wm-html name="html1" content="bind:Variables.book.dataSet.data[$i].description" fontsize="0.7" fontunit="em" color="#BCBDBB" paddingtop="0" paddingleft="1.5" paddingright="1.5" paddingbottom="1.5" paddingunit="em" class="para">bind:Variables.book.dataSet.data[$i].description</wm-html>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

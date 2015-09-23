@@ -1,0 +1,6 @@
+.info-btn {
+    background: transparent url('resources/images/imagelists/Icon_info.png') center center no-repeat;
+    width: 20pt;
+    height: 20pt;
+    display: inline-block;
+}
