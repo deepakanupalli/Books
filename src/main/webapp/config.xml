@@ -8,44 +8,14 @@
     <content src="index.html"/>
     <access origin="https://*/*"/>
     <access origin="http://*/*"/>
-    <access origin="http://ec2-54-188-141-43.us-west-2.compute.amazonaws.com:8080/BooksMobile/*"/>
+    <access origin="http://e1d52cdd9597.cloud.wavemakeronline.com/Books/#/Main/*"/>
     <allow-intent href="https://*/*"/>
     <allow-intent href="http://*/*"/>
-    <feature name="AppVersion">
-        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
     </feature>
-    <feature name="AppVersion">
-        <param name="ios-package" value="AppVersion"/>
-    </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
-    </feature>
-    <feature name="SplashScreen">
-        <param name="ios-package" value="CDVSplashScreen"/>
-    </feature>
-    <feature name="Vibrate">
-        <param name="android-package" value="org.apache.cordova.vibration.Vibration"/>
-    </feature>
-    <feature name="Vibrate">
-        <param name="ios-package" value="CDVVibration"/>
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils"/>
-    </feature>
-    <feature name="File">
-        <param name="ios-package" value="CDVFile"/>
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device"/>
-    </feature>
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice"/>
-    </feature>
-    <feature name="DatePicker">
-        <param name="android-package" value="com.plugin.datepicker.DatePickerPlugin"/>
-    </feature>
-    <feature name="DatePicker">
-        <param name="ios-package" value="DatePicker"/>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera"/>
     </feature>
     <feature name="Capture">
         <param name="android-package" value="org.apache.cordova.mediacapture.Capture"/>
@@ -53,17 +23,47 @@
     <feature name="Capture">
         <param name="ios-package" value="CDVCapture"/>
     </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
+    <feature name="DatePicker">
+        <param name="android-package" value="com.plugin.datepicker.DatePickerPlugin"/>
     </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera"/>
+    <feature name="DatePicker">
+        <param name="ios-package" value="DatePicker"/>
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils"/>
+    </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile"/>
     </feature>
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer"/>
     </feature>
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer"/>
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device"/>
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice"/>
+    </feature>
+    <feature name="Vibrate">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration"/>
+    </feature>
+    <feature name="Vibrate">
+        <param name="ios-package" value="CDVVibration"/>
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen"/>
+    </feature>
+    <feature name="AppVersion">
+        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
+    </feature>
+    <feature name="AppVersion">
+        <param name="ios-package" value="AppVersion"/>
     </feature>
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
