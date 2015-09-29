@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="isbnLookup" CRUDService="false" type="RestService" springFile="isbnLookup.spring.xml">
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="isbnLookup" type="RestService" springFile="isbnLookup.spring.xml">
     <operation name="invoke">
         <parameter name="q" typeRef="java.lang.String" isList="false"/>
         <return typeRef="isbnLookup.RootResponse" isList="false"/>

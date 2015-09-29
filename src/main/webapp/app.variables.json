@@ -588,15 +588,19 @@
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage-ProfilePage-wm.NavigationVariable-1440767379339"
 	},
-	"deviceID": {
-		"name": "deviceID",
+	"deviceInfo": {
+		"name": "deviceInfo",
 		"owner": "App",
 		"dataSet": {
-			"UUID": "0"
+			"connectionType": "NONE",
+			"deviceModel": "DEVICEMODEL",
+			"os": "DEVICEOS",
+			"osVersion": "X.X.X",
+			"deviceUUID": "DEVICEUUID"
 		},
 		"dataBinding": {},
 		"service": "device",
-		"operation": "getDeviceUUID",
+		"operation": "getDeviceInfo",
 		"startUpdate": true,
 		"imageQuality": 80,
 		"imageEncodingType": "0",
@@ -607,7 +611,7 @@
 		"geolocationMaximumAge": 3,
 		"geolocationTimeout": 5,
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-deviceID-wm.MobileVariable-1442052660105"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-deviceInfo-device-deviceID-wm.DeviceVariable-1442052660105"
 	}
 }

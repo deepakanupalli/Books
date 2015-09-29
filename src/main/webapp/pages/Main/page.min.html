@@ -107,7 +107,7 @@ var _MainPage_Variables_ ={
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -348,7 +348,7 @@ var _MainPage_Variables_ ={
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -589,7 +589,7 @@ var _MainPage_Variables_ ={
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -831,7 +831,7 @@ var _MainPage_Variables_ ={
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -1024,7 +1024,7 @@ var _MainPage_Variables_ ={
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="page1">
-    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
+    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1" animation="slide-in"></wm-left-panel>
     <wm-mobile-navbar name="mobile_navbar1" title="MyBOOKS" backbutton="false" backgroundsize="10px, 10px" backgroundposition="center center" leftnavpaneliconclass="info-btn" paddingtop="0">
         <wm-button class="btn-transparent" caption="" type="button" name="addBtn" on-click="goToPage-AddBook" backgroundrepeat="no-repeat" iconurl="resources/images/imagelists/Icon_add .png" iconwidth="25px" backgroundposition="center, center"></wm-button>
         <wm-button class="btn" caption="" type="button" name="button3" on-click="allBooks;mywishlist;readBooks;readingBooks" backgroundposition="center,center" backgroundcolor="transparent" bordercolor="transparent" display="inline-block"

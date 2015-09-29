@@ -54,11 +54,9 @@
 		"name": "scanISBNData",
 		"owner": "Page",
 		"dataSet": {
-			"data": {
-				"text": "BAR CODE",
-				"format": "TEXT",
-				"cancelled": false
-			}
+			"text": "BAR CODE",
+			"format": "TEXT",
+			"cancelled": false
 		},
 		"dataBinding": {},
 		"service": "scan",
@@ -74,8 +72,8 @@
 		"geolocationTimeout": 5,
 		"onSuccess": "getISBNdata",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-scanISBNData-wm.MobileVariable-1440209455530"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-scanISBNData-wm.DeviceVariable-1440209455530"
 	},
 	"uploadImage": {
 		"name": "uploadImage",
@@ -88,7 +86,7 @@
 		},
 		"dataBinding": {
 			"remoteFolder": "",
-			"localFile": "bind:Variables.takeBookPicture.dataSet.data"
+			"localFile": "bind:Variables.takeBookPicture.dataSet.imagePath"
 		},
 		"service": "file",
 		"operation": "upload",
@@ -103,18 +101,18 @@
 		"geolocationTimeout": 5,
 		"onSuccess": "Javascript",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-uploadImage-wm.MobileVariable-1440487072029"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-uploadImage-wm.DeviceVariable-1440487072029"
 	},
 	"takeBookPicture": {
 		"name": "takeBookPicture",
 		"owner": "Page",
 		"dataSet": {
-			"data": "resources/images/imagelists/default-image.png"
+			"imagePath": "resources/images/imagelists/default-image.png"
 		},
 		"dataBinding": {},
 		"service": "camera",
-		"operation": "capturePicture",
+		"operation": "captureImage",
 		"startUpdate": false,
 		"imageQuality": 50,
 		"imageEncodingType": "0",
@@ -126,8 +124,8 @@
 		"geolocationTimeout": 5,
 		"onSuccess": "uploadImage",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-takeBookPicture-wm.MobileVariable-1440489898866"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-takeBookPicture-wm.DeviceVariable-1440489898866"
 	},
 	"BookImage": {
 		"name": "BookImage",

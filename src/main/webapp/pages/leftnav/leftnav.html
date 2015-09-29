@@ -13,7 +13,7 @@
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="12" name="gridcolumn10" class="text-center">
                 <wm-label name="label1" caption="MY BOOKS" display="block" class="h3" color="#333" fontsize="1.2" fontunit="em" fontweight="bold"></wm-label>
-                <wm-label name="label3" caption="bind:'v'+Variables.appVersion.dataSet.appversion" color="#333"></wm-label>
+                <wm-label name="label3" caption="bind:'v '+Variables.appInfo.dataSet.appversion" color="#333"></wm-label>
             </wm-gridcolumn>
         </wm-gridrow>
         <wm-gridrow name="gridrow2" paddingunit="px">
@@ -33,7 +33,7 @@
         </wm-gridrow>
         <wm-gridrow name="gridrow5">
             <wm-gridcolumn columnwidth="12" name="gridcolumn6">
-                <wm-label name="label4" display="block" fontsize="0.8" fontunit="em" textalign="center" caption="bind:Variables.deviceID.dataSet.UUID" show="false"></wm-label>
+                <wm-label name="label4" display="block" fontsize="0.8" fontunit="em" textalign="center" caption="bind:Variables.deviceInfo.dataSet.os + ' ' +Variables.deviceInfo.dataSet.osVersion" show="true"></wm-label>
             </wm-gridcolumn>
         </wm-gridrow>
     </wm-layoutgrid>

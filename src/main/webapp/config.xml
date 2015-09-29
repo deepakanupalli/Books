@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.books" version="0.2.1">
+<widget id="com.books" version="0.2.4">
     <name>Books</name>
     <description>Helps to track your book wishlist, current reading books and your book collection.</description>
     <author email="deepak.anupalli@wavemaker.com" href="">
@@ -8,7 +8,7 @@
     <content src="index.html"/>
     <access origin="https://*/*"/>
     <access origin="http://*/*"/>
-    <access origin="http://e1d52cdd9597.cloud.wavemakeronline.com/Books/#/Main/*"/>
+    <access origin="http://e1d52cdd9597.cloud.wavemakeronline.com/Books/*"/>
     <allow-intent href="https://*/*"/>
     <allow-intent href="http://*/*"/>
     <feature name="Camera">
@@ -35,6 +35,12 @@
     <feature name="File">
         <param name="ios-package" value="CDVFile"/>
     </feature>
+    <feature name="Vibrate">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration"/>
+    </feature>
+    <feature name="Vibrate">
+        <param name="ios-package" value="CDVVibration"/>
+    </feature>
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer"/>
     </feature>
@@ -47,23 +53,17 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice"/>
     </feature>
-    <feature name="Vibrate">
-        <param name="android-package" value="org.apache.cordova.vibration.Vibration"/>
+    <feature name="AppVersion">
+        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
     </feature>
-    <feature name="Vibrate">
-        <param name="ios-package" value="CDVVibration"/>
+    <feature name="AppVersion">
+        <param name="ios-package" value="AppVersion"/>
     </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
     </feature>
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen"/>
-    </feature>
-    <feature name="AppVersion">
-        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
-    </feature>
-    <feature name="AppVersion">
-        <param name="ios-package" value="AppVersion"/>
     </feature>
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
@@ -126,7 +126,7 @@
         <icon height="180" src="www/resources/images/logos/ios/icon-180@3x.png" width="180"/>
     </platform>
     <preference name="Orientation" value="portrait"/>
-    <preference name="FullScreen" value="true"/>
+    <preference name="FullScreen" value="false"/>
     <preference name="prerendered-icon" value="false"/>
     <preference name="ios-statusbarstyle" value="default"/>
     <preference name="AutoHideSplashScreen" value="false"/>

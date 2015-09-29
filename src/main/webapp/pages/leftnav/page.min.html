@@ -26,15 +26,15 @@ Application.$controller("leftnavPageController", ["$scope", function($scope) {
 </script>
 <script id="leftnav.variables.json">
 var _leftnavPage_Variables_ ={
-	"appVersion": {
-		"name": "appVersion",
+	"appInfo": {
 		"owner": "Page",
 		"dataSet": {
-			"appversion": ""
+			"appversion": "X.X.X",
+			"cordovaversion": "X.X.X"
 		},
 		"dataBinding": {},
 		"service": "device",
-		"operation": "getAppVersionNumber",
+		"operation": "getAppInfo",
 		"startUpdate": true,
 		"imageQuality": 80,
 		"imageEncodingType": "0",
@@ -45,52 +45,9 @@ var _leftnavPage_Variables_ ={
 		"geolocationMaximumAge": 3,
 		"geolocationTimeout": 5,
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-appVersion-wm.MobileVariable-1441892495401"
-	},
-	"osVersion": {
-		"name": "osVersion",
-		"owner": "Page",
-		"dataSet": {
-			"osversion": ""
-		},
-		"dataBinding": {},
-		"service": "device",
-		"operation": "getOSVersion",
-		"startUpdate": true,
-		"imageQuality": 80,
-		"imageEncodingType": "0",
-		"allowImageEdit": false,
-		"correctOrientation": true,
-		"saveToPhotoAlbum": false,
-		"geolocationHighAccuracy": true,
-		"geolocationMaximumAge": 3,
-		"geolocationTimeout": 5,
-		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-osVersion-wm.MobileVariable-1441965581420"
-	},
-	"osName": {
-		"name": "osName",
-		"owner": "Page",
-		"dataSet": {
-			"os": ""
-		},
-		"dataBinding": {},
-		"service": "device",
-		"operation": "getOS",
-		"startUpdate": true,
-		"imageQuality": 80,
-		"imageEncodingType": "0",
-		"allowImageEdit": false,
-		"correctOrientation": true,
-		"saveToPhotoAlbum": false,
-		"geolocationHighAccuracy": true,
-		"geolocationMaximumAge": 3,
-		"geolocationTimeout": 5,
-		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-osName-wm.MobileVariable-1441965643016"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-appInfo-wm.DeviceVariable-1443192802565",
+		"name": "appInfo"
 	}
 }
 </script>
@@ -110,7 +67,7 @@ var _leftnavPage_Variables_ ={
             </wm-gridcolumn>
             <wm-gridcolumn columnwidth="12" name="gridcolumn10" class="text-center">
                 <wm-label name="label1" caption="MY BOOKS" display="block" class="h3" color="#333" fontsize="1.2" fontunit="em" fontweight="bold"></wm-label>
-                <wm-label name="label3" caption="bind:'v'+Variables.appVersion.dataSet.appversion" color="#333"></wm-label>
+                <wm-label name="label3" caption="bind:'v '+Variables.appInfo.dataSet.appversion" color="#333"></wm-label>
             </wm-gridcolumn>
         </wm-gridrow>
         <wm-gridrow name="gridrow2" paddingunit="px">
@@ -130,7 +87,7 @@ var _leftnavPage_Variables_ ={
         </wm-gridrow>
         <wm-gridrow name="gridrow5">
             <wm-gridcolumn columnwidth="12" name="gridcolumn6">
-                <wm-label name="label4" display="block" fontsize="0.8" fontunit="em" textalign="center" caption="bind:Variables.deviceID.dataSet.UUID" show="false"></wm-label>
+                <wm-label name="label4" display="block" fontsize="0.8" fontunit="em" textalign="center" caption="bind:Variables.deviceInfo.dataSet.os + ' ' +Variables.deviceInfo.dataSet.osVersion" show="true"></wm-label>
             </wm-gridcolumn>
         </wm-gridrow>
     </wm-layoutgrid>

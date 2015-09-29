@@ -110,11 +110,9 @@ var _AddBookPage_Variables_ ={
 		"name": "scanISBNData",
 		"owner": "Page",
 		"dataSet": {
-			"data": {
-				"text": "BAR CODE",
-				"format": "TEXT",
-				"cancelled": false
-			}
+			"text": "BAR CODE",
+			"format": "TEXT",
+			"cancelled": false
 		},
 		"dataBinding": {},
 		"service": "scan",
@@ -130,8 +128,8 @@ var _AddBookPage_Variables_ ={
 		"geolocationTimeout": 5,
 		"onSuccess": "getISBNdata",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-scanISBNData-wm.MobileVariable-1440209455530"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-scanISBNData-wm.DeviceVariable-1440209455530"
 	},
 	"uploadImage": {
 		"name": "uploadImage",
@@ -144,7 +142,7 @@ var _AddBookPage_Variables_ ={
 		},
 		"dataBinding": {
 			"remoteFolder": "",
-			"localFile": "bind:Variables.takeBookPicture.dataSet.data"
+			"localFile": "bind:Variables.takeBookPicture.dataSet.imagePath"
 		},
 		"service": "file",
 		"operation": "upload",
@@ -159,18 +157,18 @@ var _AddBookPage_Variables_ ={
 		"geolocationTimeout": 5,
 		"onSuccess": "Javascript",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-uploadImage-wm.MobileVariable-1440487072029"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-uploadImage-wm.DeviceVariable-1440487072029"
 	},
 	"takeBookPicture": {
 		"name": "takeBookPicture",
 		"owner": "Page",
 		"dataSet": {
-			"data": "resources/images/imagelists/default-image.png"
+			"imagePath": "resources/images/imagelists/default-image.png"
 		},
 		"dataBinding": {},
 		"service": "camera",
-		"operation": "capturePicture",
+		"operation": "captureImage",
 		"startUpdate": false,
 		"imageQuality": 50,
 		"imageEncodingType": "0",
@@ -182,8 +180,8 @@ var _AddBookPage_Variables_ ={
 		"geolocationTimeout": 5,
 		"onSuccess": "uploadImage",
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-takeBookPicture-wm.MobileVariable-1440489898866"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-takeBookPicture-wm.DeviceVariable-1440489898866"
 	},
 	"BookImage": {
 		"name": "BookImage",
@@ -495,58 +493,58 @@ var _AddBookPage_Variables_ ={
                     <wm-liveform name="addBookForm" dataset="bind:Variables.LIBRARYBookData.dataSet" defaultmode="Edit" insertmessage="Book added successfully" novalidate="true" on-success="goToPage-Main" on-beforeservicecall="addBookFormBeforeservicecall($event, $operation, $data)"
                     show="true" captionposition="top">
                         <wm-layoutgrid name="layoutgrid1" class="app-list">
-                            <wm-gridrow show="hide" name="gridrow58">
+                            <wm-gridrow show="hide" name="gridrow1">
                                 <wm-gridcolumn name="show" columnwidth="12">
                                     <wm-form-field display-name="Image Url" show="false" primary-key="false" generator="null" key="imageUrl" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value" multiple="false"
                                     regexp=".*" default-value="bind:Variables.BookImage.dataSet.dataValue"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="show" name="gridrow59">
+                            <wm-gridrow show="show" name="gridrow2">
                                 <wm-gridcolumn name="show" columnwidth="12" fontunit="em" fontsize="0.87">
                                     <wm-form-field display-name="Title" show="true" primary-key="false" generator="null" key="title" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter Title" class="col-xs-12"
                                     multiple="false" regexp=".*" default-value="bind:Variables.getISBNdata.dataSet.items[0].volumeInfo.title"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="show" name="gridrow60">
+                            <wm-gridrow show="show" name="gridrow3">
                                 <wm-gridcolumn name="show" columnwidth="12" fontsize="0.87" fontunit="em">
                                     <wm-form-field display-name="Author" show="true" primary-key="false" generator="null" key="author" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter Author" multiple="false"
                                     regexp=".*" default-value="bind:Variables.getISBNdata.dataSet.items[0].volumeInfo.authors.join(',')"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="show" name="gridrow61">
+                            <wm-gridrow show="show" name="gridrow4">
                                 <wm-gridcolumn name="show" columnwidth="12" fontsize="0.87" fontunit="em">
                                     <wm-form-field display-name="Publisher" show="true" primary-key="false" generator="null" key="publisher" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter Publisher" multiple="false"
                                     regexp=".*" default-value="bind:Variables.getISBNdata.dataSet.items[0].volumeInfo.publisher"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="show" name="gridrow62">
+                            <wm-gridrow show="show" name="gridrow5">
                                 <wm-gridcolumn name="show" columnwidth="12" fontsize="0.87" fontunit="em">
                                     <wm-form-field display-name="ISBN" show="true" primary-key="false" generator="null" key="isbn" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter ISBN" multiple="false"
                                     regexp=".*" default-value="bind:Widgets.barcodescanner.datavalue"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="show" name="gridrow63">
+                            <wm-gridrow show="show" name="gridrow6">
                                 <wm-gridcolumn name="show" columnwidth="12" fontsize="0.87" fontunit="em">
                                     <wm-form-field display-name="Description" show="true" primary-key="false" generator="null" key="description" type="text" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Add Description"
                                     multiple="false" regexp=".*" default-value="bind:Variables.getISBNdata.dataSet.items[0].volumeInfo.description" height="auto"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="hide" name="gridrow64">
+                            <wm-gridrow show="hide" name="gridrow7">
                                 <wm-gridcolumn name="show" columnwidth="12">
                                     <wm-form-field display-name="Read Status" show="false" primary-key="false" generator="null" key="readStatus" type="integer" is-related="false" readonly="false" required="false" default-value="1" placeholder="Enter value"
                                     multiple="false" regexp=".*"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="hide" name="gridrow65">
-                                <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-gridrow show="hide" name="gridrow8">
+                                <wm-gridcolumn name="show" columnwidth="12">
                                     <wm-form-field display-name="Rating" show="false" primary-key="false" generator="null" key="rating" type="integer" is-related="false" readonly="false" required="false" default-value="3" placeholder="Enter value" multiple="false"
                                     regexp=".*"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
-                            <wm-gridrow show="hide" name="gridrow66">
-                                <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                            <wm-gridrow show="hide" name="gridrow9">
+                                <wm-gridcolumn name="show" columnwidth="12">
                                     <wm-form-field display-name="Tenantid" show="false" primary-key="false" generator="null" key="tenantid" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value" multiple="false"
-                                    regexp=".*" default-value="bind:Variables.deviceID.dataSet.UUID"></wm-form-field>
+                                    regexp=".*" default-value="bind:Variables.deviceInfo.dataSet.deviceUUID"></wm-form-field>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>

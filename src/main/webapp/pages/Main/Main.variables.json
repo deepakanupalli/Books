@@ -51,7 +51,7 @@
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -292,7 +292,7 @@
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -533,7 +533,7 @@
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}
@@ -775,7 +775,7 @@
 					{
 						"name": "tenantid",
 						"type": "string",
-						"value": "bind:Variables.deviceID.dataSet.UUID"
+						"value": "bind:Variables.deviceInfo.dataSet.deviceUUID"
 					}
 				]
 			}

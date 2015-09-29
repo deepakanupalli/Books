@@ -1,13 +1,13 @@
 {
-	"appVersion": {
-		"name": "appVersion",
+	"appInfo": {
 		"owner": "Page",
 		"dataSet": {
-			"appversion": ""
+			"appversion": "X.X.X",
+			"cordovaversion": "X.X.X"
 		},
 		"dataBinding": {},
 		"service": "device",
-		"operation": "getAppVersionNumber",
+		"operation": "getAppInfo",
 		"startUpdate": true,
 		"imageQuality": 80,
 		"imageEncodingType": "0",
@@ -18,51 +18,8 @@
 		"geolocationMaximumAge": 3,
 		"geolocationTimeout": 5,
 		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-appVersion-wm.MobileVariable-1441892495401"
-	},
-	"osVersion": {
-		"name": "osVersion",
-		"owner": "Page",
-		"dataSet": {
-			"osversion": ""
-		},
-		"dataBinding": {},
-		"service": "device",
-		"operation": "getOSVersion",
-		"startUpdate": true,
-		"imageQuality": 80,
-		"imageEncodingType": "0",
-		"allowImageEdit": false,
-		"correctOrientation": true,
-		"saveToPhotoAlbum": false,
-		"geolocationHighAccuracy": true,
-		"geolocationMaximumAge": 3,
-		"geolocationTimeout": 5,
-		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-osVersion-wm.MobileVariable-1441965581420"
-	},
-	"osName": {
-		"name": "osName",
-		"owner": "Page",
-		"dataSet": {
-			"os": ""
-		},
-		"dataBinding": {},
-		"service": "device",
-		"operation": "getOS",
-		"startUpdate": true,
-		"imageQuality": 80,
-		"imageEncodingType": "0",
-		"allowImageEdit": false,
-		"correctOrientation": true,
-		"saveToPhotoAlbum": false,
-		"geolocationHighAccuracy": true,
-		"geolocationMaximumAge": 3,
-		"geolocationTimeout": 5,
-		"vibrationtime": 2,
-		"category": "wm.MobileVariable",
-		"_id": "wm-osName-wm.MobileVariable-1441965643016"
+		"category": "wm.DeviceVariable",
+		"_id": "wm-appInfo-wm.DeviceVariable-1443192802565",
+		"name": "appInfo"
 	}
 }
