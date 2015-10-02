@@ -12,6 +12,8 @@
  .wm-app .navbar i {
      position: absolute;
      top: 11pt;
+     width: 20pt;
+     height: 20pt;
  }
 .app-livelist > ul {
    overflow: visible;

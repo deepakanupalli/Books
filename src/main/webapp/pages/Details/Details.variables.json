@@ -414,6 +414,9 @@
 	"vibrate": {
 		"name": "vibrate",
 		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
 		"dataBinding": {},
 		"service": "device",
 		"operation": "vibrate",

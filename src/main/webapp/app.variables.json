@@ -579,15 +579,6 @@
 		"category": "wm.Variable",
 		"_id": "wm-READ_STATUS_ENUM-wm.Variable-1440636299098"
 	},
-	"goToPage-ProfilePage": {
-		"name": "goToPage-ProfilePage",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ProfilePage",
-		"dataBinding": {},
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage-ProfilePage-wm.NavigationVariable-1440767379339"
-	},
 	"deviceInfo": {
 		"name": "deviceInfo",
 		"owner": "App",
