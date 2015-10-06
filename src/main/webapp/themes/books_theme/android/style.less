@@ -24,6 +24,7 @@
   //Variables
   @app-border-color: #CECECE;
   @app-header-bg-color: #CA534E;
+  @label-text-color: #ccc;
 
   button {
     color: #333;
@@ -62,13 +63,15 @@
   }
   .app-livelist {
       label {
-        color: #fff;
+        color: @label-text-color;
       }
 
-      .list-group-item {
-        &.active, &:hover, &:focus {
-            background-color: #424246;
-            border-color: #424246;
+      .list-group-item{
+        padding: 0 6pt;
+        margin: 10pt 0;
+
+        &.active, &:focus, &:hover{
+          background-color: rgba(0, 0, 0, 0.298039);
         }
       }
   }
@@ -237,7 +240,7 @@
   //Label
   label {
     font-weight: normal;
-    color: #fff;
+    color: @label-text-color;
   }
 
   //Tile
@@ -401,16 +404,48 @@
   //Mobile Navbar
   .app-mobile-navbar  {
     .navbar  {
+        overflow: hidden;
+        padding: 0 10px;
+        position: relative;
+        img {
+            position: relative;
+            top: -3pt;
+        }
+        i {
+            position: absolute;
+            top: 11pt;
+        }
       .navbar-nav  {
         > li {
           > * {
             color: #ffffff;
             height: 44pt;
           }
+          .info-btn {
+              background: transparent url('images/Icon_info_2x.png') center center no-repeat;
+              background-size: 100%;
+              display: inline-block;
+              width: 25pt;
+              height: 25pt;
+          }
         }
       }
     }
   }
+
+  //book image list
+  .bookImage {
+      border-radius: 7pt;
+      min-width:35pt;
+      min-height:50pt;
+      max-height: 100%;
+      max-width: 100%;
+  }
+  .bg-image-container img {
+      border-radius: 3pt;
+      min-width:50pt;
+  }
+
 
   //Nav Open state
   .nav {
@@ -606,5 +641,30 @@
         }
       }
     }
+  }
+  /* Spinner icon */
+  .app-spinner .spinner-image{
+    background: rgba(0, 0, 0, 0.5) url('loader.svg') center center no-repeat;
+    background-size: 80% 80%;
+    border-radius: 10px;
+  }
+  /* toaster*/
+  #toast-container{
+    .toast{
+      border-radius: 0;
+      background-color: #273647;
+
+      .toast-title{
+        font-size: 0.8em;
+      }
+
+      .toast-message{
+        font-size: 0.7em;
+      }
+    }
+  }
+  ::selection, a::selection {
+      background-color: rgba(0, 0, 0, 0.298039);
+      color: #fff;
   }
 }

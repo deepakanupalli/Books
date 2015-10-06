@@ -5,5 +5,5 @@
         <property name="serviceId" value="FileService"/>
         <property name="serviceType" ref="JavaService"/>
     </bean>
-    <bean class="com.books.fileservice.FileController" id="FileServiceController"/>
+    <bean class="com.books.fileservice.controller.FileController" id="FileServiceController"/>
 </beans>

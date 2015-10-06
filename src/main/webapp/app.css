@@ -1,20 +1,3 @@
-.wm-app h1, .wm-app .h1 {
-    font-family: 'Robotoregular', sans-serif !important;
-}
-.wm-app .app-mobile-navbar .navbar {
-    overflow: hidden;
-    position: relative;
-}
-.wm-app .navbar img {
-    position: relative;
-    top: -3pt;
- }
- .wm-app .navbar i {
-     position: absolute;
-     top: 11pt;
-     width: 25pt;
-     height: 25pt;
- }
 .app-livelist > ul {
    overflow: visible;
 }
@@ -37,7 +20,6 @@
     margin: 10pt 0;
 }
 
-
 .wm-app .list-group.book-list-items .list-group-item .list-content {
     align-items: flex-end;
     justify-content: center;
@@ -45,47 +27,10 @@
     height: 100pt;
 }
 
-.wm-app .list-group-item.active, .wm-app .list-group-item.active:hover, .wm-app .list-group-item.active:focus {
-    background-color: rgba(0, 0, 0, 0.298039);
-}
-
-.wm-app .add-list .form-group .form-control {
-    width: 100%;
-}
 .wm-app .para {
     line-height: 165%;
 }
 
 .wm-app .custom-bg {
     min-height: 100%;
-}
-::selection, a::selection {
-    background-color: rgba(0, 0, 0, 0.298039);
-    color: #fff;
-}
-/* Spinner icon */
-.app-spinner .spinner-message .spinner-image{
-  background: rgba(0, 0, 0, 0.5) url('loader.svg') center center no-repeat;
-  background-size: 80% 80%;
-  border-radius: 10px;
-}
-/* toaster*/
-#toast-container{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-#toast-container .toast{
-  width: 100%;
-  border-radius: 0;
-  margin: 0;
-  background-color: #273647;
-  font-family: 'Roboto-Regular', sans-serif;
-}
-#toast-container .toast .toast-title{
-  font-size: 0.8em;
-}
-#toast-container .toast .toast-message{
-  font-size: 0.7em;
 }
